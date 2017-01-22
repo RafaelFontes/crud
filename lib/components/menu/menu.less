@@ -1,0 +1,59 @@
+@import (reference) '../../../css/defaults.less';
+
+#menu-component
+{
+  > ul {
+    .flex-horizontal;
+    justify-content: flex-start;
+
+    > li:hover {
+      .gradient( lighten(@primaryColor, 10%), @primaryColor );
+    }
+
+    > li {
+      position: relative;
+      padding: @padding;
+      cursor: pointer;
+      .gradient( @primaryColor, lighten(@primaryColor,10%) );
+
+      > ul {
+        display: none;
+      }
+    }
+
+    > li:last-child {
+      flex: 1 100%;
+      pointer-events: none;
+    }
+  }
+
+  ul li label {
+    font-size: 13px;
+    font-weight: bold;
+    font-family: Arial, sans-serif;
+    color: white;
+    .text-shadow;
+    pointer-events: none;
+    white-space: nowrap;
+
+  }
+
+  ul li:hover > ul {
+    display: block;
+    position: absolute;
+    min-width: 100%;
+    top: 100%;
+    left: 0;
+  }
+
+  ul li:hover > ul > li
+  {
+    padding: @padding;
+    .gradient( lighten(@primaryColor, 10%), @primaryColor );
+  }
+
+  ul li:hover > ul > li:hover
+  {
+    .inner-shadow( 0, 0, 5px, 2px, 0.3 );
+  }
+}

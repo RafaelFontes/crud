@@ -1,0 +1,25 @@
+<div class="logo"></div>
+
+<div id="title">
+    <h1>Faça login para entrar no sistema</h1>
+</div>
+
+<section id="authentication">
+    <div class="instructions">
+        <span *ngIf="currentStep == PASSWORD_STEP" (click)="prevStep()" class="step-back"><i class="fa fa-arrow-left"></i></span>
+        <span class="icon"><i class="fa fa-user-circle"></i></span>
+    </div>
+
+    <div class="content">
+        <div class="wrapper">
+            <input [(ngModel)]="usernameFieldValue" (blur)="nextStep()" id="username" [disabled]="currentStep != USERNAME_STEP" #username type="text" placeholder="Digite sua matrícula"/>
+            <input [(ngModel)]="passwordFieldValue" id="password" [disabled]="currentStep != PASSWORD_STEP" #password type="password" placeholder="Digite sua senha"/>
+        </div>
+        <button *ngIf="currentStep == USERNAME_STEP" (click)="nextStep()">Próximo</button>
+        <button *ngIf="currentStep == PASSWORD_STEP" (click)="authenticate()">Fazer login</button>
+    </div>
+</section>
+
+<div id="footer">
+    Problemas para entrar no sistema? Ligue: 190
+</div>

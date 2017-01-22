@@ -1,0 +1,19 @@
+#main-component {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+#main-component {
+  align-items: center;
+}
+#main-component {
+  background-color: #a1cea4;
+}
+#main-component authentication {
+  margin-top: 16px;
+}
+#main-component menu {
+  flex: 1;
+  width: 100%;
+  align-items: center;
+}

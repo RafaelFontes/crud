@@ -1,0 +1,44 @@
+@import (reference) 'defines.less';
+@import (reference) 'defaults.less';
+
+.dialog {
+  background-color: white;
+
+  & when ( @roundedBorders = true) {
+    border-radius: @radius;
+  }
+
+  .content {
+    padding: @padding;
+  }
+
+  .header:extend(.font-medium)
+  {
+    text-align: center;
+    font-weight: bold;
+
+    .gradient( @backgroundPrimaryColor, lighten(@backgroundPrimaryColor,10%) );
+    padding: @padding;
+
+  }
+
+  .drop-shadow;
+
+  button {
+    .gradient( @primaryColor, lighten(@primaryColor,10%) );
+    color: white;
+    padding: 10px;
+    & when ( @roundedBorders = true) {
+      border-radius: @radius;
+    }
+  }
+
+  button:hover {
+    .gradient( lighten(@primaryColor, 10%), @primaryColor );
+  }
+
+  button:active {
+    .inner-shadow( 0, 0, 5px, 2px, 0.3 );
+  }
+
+}

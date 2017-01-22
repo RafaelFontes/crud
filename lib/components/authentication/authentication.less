@@ -1,0 +1,82 @@
+@import (reference) '../../../css/dialog.less';
+@import (reference) '../../../css/defaults.less';
+
+@dialogWidth: 274px;
+
+#authentication:extend(.dialog all,.flex-vertical)
+{
+  overflow: hidden;
+  width: @dialogWidth;
+  position: relative;
+  padding: 40px;
+
+  .header {
+    background: transparent;
+  }
+
+  background-color: #f7f7f7;
+
+  .content {
+
+    padding: 0;
+    margin-top: 16px;
+
+    .wrapper {
+      width: @dialogWidth * 5;
+
+      input { width: @dialogWidth; float: left; margin-right: @padding; margin-left: 500px; }
+
+      input.active:first-child { margin-left: 0; }
+    }
+
+    button {
+      width: @dialogWidth;
+      margin-top: 10px;
+      padding: @padding;
+    }
+  }
+
+  .instructions {
+    position: relative;
+
+    .icon {
+      font-size: 96px; display: block; text-align: center;
+      i {  background-color: @primaryColor; border-radius: 48px; color: @backgroundPrimaryColor;  }
+    }
+
+    .step-back { position:absolute; font-size: 24px; left: 10px; top: 20px; cursor: pointer; }
+  }
+
+}
+
+#authentication:after
+{
+  clear: both;
+}
+
+#title
+{
+  .flex-horizontal;
+  .align-hor-center;
+  margin: 16px 0 16px 0;
+  font-size: 18px;
+  font-weight: 400;
+}
+
+.logo
+{
+  .flex-horizontal;
+  .align-hor-center;
+  height: image-height('../../../img/logo.png');
+  background: url('/img/logo.png')  center no-repeat;
+}
+
+
+#footer
+{
+  .flex-horizontal;
+  .align-hor-center;
+  font-size: 14px;
+  font-family: Arial, sans-serif;
+  margin-top: 16px;
+}

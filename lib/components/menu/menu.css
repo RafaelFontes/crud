@@ -1,0 +1,62 @@
+#menu-component > ul {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  justify-content: flex-start;
+}
+#menu-component > ul > li:hover {
+  background-color: #386b3c;
+  background: -webkit-gradient(linear, left top, left bottom, from(#386b3c), to(#274929));
+  background: -webkit-linear-gradient(top, #386b3c, #274929);
+  background: -moz-linear-gradient(top, #386b3c, #274929);
+  background: -ms-linear-gradient(top, #386b3c, #274929);
+  background: -o-linear-gradient(top, #386b3c, #274929);
+}
+#menu-component > ul > li {
+  position: relative;
+  padding: 10px;
+  cursor: pointer;
+  background-color: #274929;
+  background: -webkit-gradient(linear, left top, left bottom, from(#274929), to(#386b3c));
+  background: -webkit-linear-gradient(top, #274929, #386b3c);
+  background: -moz-linear-gradient(top, #274929, #386b3c);
+  background: -ms-linear-gradient(top, #274929, #386b3c);
+  background: -o-linear-gradient(top, #274929, #386b3c);
+}
+#menu-component > ul > li > ul {
+  display: none;
+}
+#menu-component > ul > li:last-child {
+  flex: 1 100%;
+  pointer-events: none;
+}
+#menu-component ul li label {
+  font-size: 13px;
+  font-weight: bold;
+  font-family: Arial, sans-serif;
+  color: white;
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.25);
+  pointer-events: none;
+  white-space: nowrap;
+}
+#menu-component ul li:hover > ul {
+  display: block;
+  position: absolute;
+  min-width: 100%;
+  top: 100%;
+  left: 0;
+}
+#menu-component ul li:hover > ul > li {
+  padding: 10px;
+  background-color: #386b3c;
+  background: -webkit-gradient(linear, left top, left bottom, from(#386b3c), to(#274929));
+  background: -webkit-linear-gradient(top, #386b3c, #274929);
+  background: -moz-linear-gradient(top, #386b3c, #274929);
+  background: -ms-linear-gradient(top, #386b3c, #274929);
+  background: -o-linear-gradient(top, #386b3c, #274929);
+}
+#menu-component ul li:hover > ul > li:hover {
+  -webkit-box-shadow: inset 0 0 5px 2px rgba(0, 0, 0, 0.3);
+  -moz-box-shadow: inset 0 0 5px 2px rgba(0, 0, 0, 0.3);
+  box-shadow: inset 0 0 5px 2px rgba(0, 0, 0, 0.3);
+}

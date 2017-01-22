@@ -1,0 +1,24 @@
+{
+    "compilerOptions": {
+        "module": "system",
+        "sourceMap": false,
+        "declaration": false,
+        "experimentalDecorators": true,
+        "emitDecoratorMetadata": true,
+        "noImplicitAny": true,
+        "baseUrl": ".",
+        "noFallthroughCasesInSwitch": true,
+        "rootDir": ".",
+        "target": "es5",
+        "removeComments": true,
+        "lib" : ["dom","es6"],
+        "types": [],
+        "typeRoots": ["node_modules", "node_modules/@types"],
+        "moduleResolution": "node"
+    },
+    "exclude": ["node_modules", "deps"],
+    "compileOnSave": true,
+    "include": [
+        "lib/bootstrap.ts"
+    ]
+}

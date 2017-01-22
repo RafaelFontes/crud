@@ -1,0 +1,4 @@
+<section id="main-component">
+    <authentication (stateChange)="onAuthenticationStateChanged($event)" *ngIf="!isAuthenticated()"></authentication>
+    <menu *ngIf="isMenuEnabled()" (menuChange)="onMenuChanged($event)" #menuComponent ></menu>
+</section>

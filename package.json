@@ -1,0 +1,48 @@
+{
+  "name": "vf-core",
+  "version": "1.0.0",
+  "description": "VF Core",
+  "main": "index.js",
+  "scripts": {
+    "start-server": "http-server -p 8001 -d -i --cors -o -c-1",
+    "watch": "tsc --p tsconfig.json --watch"
+  },
+  "author": "Rafael Lúcio<poste9@gmail.com>",
+  "license": "ISC",
+  "jspm": {
+    "directories": {
+      "packages": "deps"
+    },
+    "dependencies": {
+      "@angular/common": "npm:@angular/common@^2.4.4",
+      "@angular/core": "npm:@angular/core@^2.4.4",
+      "@angular/forms": "npm:@angular/forms@^2.4.4",
+      "@angular/platform-browser": "npm:@angular/platform-browser@^2.4.4",
+      "@angular/platform-browser-dynamic": "npm:@angular/platform-browser-dynamic@^2.4.4",
+      "FontFaceKit/open-sans": "github:FontFaceKit/open-sans@^1.4.2",
+      "css": "github:systemjs/plugin-css@^0.1.32",
+      "fontawsome": "github:FortAwesome/Font-Awesome@^4.7.0",
+      "gsap": "npm:gsap@^1.19.1",
+      "reflect-metadata": "npm:reflect-metadata@^0.1.9",
+      "reset-css": "npm:reset-css@^2.2.0",
+      "rxjs": "npm:rxjs@^5.0.3",
+      "zone.js": "npm:zone.js@^0.7.6"
+    },
+    "devDependencies": {
+      "babel": "npm:babel-core@^5.8.24",
+      "babel-runtime": "npm:babel-runtime@^5.8.24",
+      "core-js": "npm:core-js@^1.1.4"
+    }
+  },
+  "devDependencies": {
+    "@angular/common": "^2.4.4",
+    "@angular/compiler": "^2.4.4",
+    "@angular/core": "^2.4.4",
+    "@angular/forms": "^2.4.4",
+    "@angular/platform-browser": "^2.4.4",
+    "@angular/platform-browser-dynamic": "^2.4.4",
+    "@types/gsap": "^1.19.0",
+    "rxjs": "^5.0.3",
+    "zone.js": "^0.7.6"
+  }
+}
