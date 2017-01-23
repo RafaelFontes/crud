@@ -5,23 +5,23 @@
   justify-content: flex-start;
 }
 #menu-component > ul > li:hover {
-  background-color: #386b3c;
-  background: -webkit-gradient(linear, left top, left bottom, from(#386b3c), to(#274929));
-  background: -webkit-linear-gradient(top, #386b3c, #274929);
-  background: -moz-linear-gradient(top, #386b3c, #274929);
-  background: -ms-linear-gradient(top, #386b3c, #274929);
-  background: -o-linear-gradient(top, #386b3c, #274929);
+  background-color: #595959;
+  background: -webkit-gradient(linear, left top, left bottom, from(#595959), to(#404040));
+  background: -webkit-linear-gradient(top, #595959, #404040);
+  background: -moz-linear-gradient(top, #595959, #404040);
+  background: -ms-linear-gradient(top, #595959, #404040);
+  background: -o-linear-gradient(top, #595959, #404040);
 }
 #menu-component > ul > li {
   position: relative;
   padding: 10px;
   cursor: pointer;
-  background-color: #274929;
-  background: -webkit-gradient(linear, left top, left bottom, from(#274929), to(#386b3c));
-  background: -webkit-linear-gradient(top, #274929, #386b3c);
-  background: -moz-linear-gradient(top, #274929, #386b3c);
-  background: -ms-linear-gradient(top, #274929, #386b3c);
-  background: -o-linear-gradient(top, #274929, #386b3c);
+  background-color: #404040;
+  background: -webkit-gradient(linear, left top, left bottom, from(#404040), to(#595959));
+  background: -webkit-linear-gradient(top, #404040, #595959);
+  background: -moz-linear-gradient(top, #404040, #595959);
+  background: -ms-linear-gradient(top, #404040, #595959);
+  background: -o-linear-gradient(top, #404040, #595959);
 }
 #menu-component > ul > li > ul {
   display: none;
@@ -47,16 +47,21 @@
   left: 0;
 }
 #menu-component ul li:hover > ul > li {
-  padding: 10px;
-  background-color: #386b3c;
-  background: -webkit-gradient(linear, left top, left bottom, from(#386b3c), to(#274929));
-  background: -webkit-linear-gradient(top, #386b3c, #274929);
-  background: -moz-linear-gradient(top, #386b3c, #274929);
-  background: -ms-linear-gradient(top, #386b3c, #274929);
-  background: -o-linear-gradient(top, #386b3c, #274929);
+  padding: 0;
+  background-color: #595959;
+  background: -webkit-gradient(linear, left top, left bottom, from(#595959), to(#404040));
+  background: -webkit-linear-gradient(top, #595959, #404040);
+  background: -moz-linear-gradient(top, #595959, #404040);
+  background: -ms-linear-gradient(top, #595959, #404040);
+  background: -o-linear-gradient(top, #595959, #404040);
+  width: 100%;
 }
 #menu-component ul li:hover > ul > li:hover {
   -webkit-box-shadow: inset 0 0 5px 2px rgba(0, 0, 0, 0.3);
   -moz-box-shadow: inset 0 0 5px 2px rgba(0, 0, 0, 0.3);
   box-shadow: inset 0 0 5px 2px rgba(0, 0, 0, 0.3);
+}
+#menu-component ul li:hover > ul > li label {
+  padding: 10px;
+  display: block;
 }

@@ -1,0 +1,37 @@
+<section #container >
+
+    <draggable></draggable>
+    <form [formGroup]="form" (ngSubmit)="sendForm()">
+
+        <input #txtId type="hidden" formControlName="id" />
+
+        <div class="form-control">
+            <label><span>Matrícula</span>
+            <input formControlName="username" />
+            </label>
+        </div>
+
+        <div class="form-control">
+            <label>
+                <input type="checkbox" formControlName="status" />
+                <span>Status</span>
+            </label>
+        </div>
+
+        <div class="form-control" *ngIf="isInEditMode() && !txtId.value">
+            <label>
+                <span>Senha</span>
+                <input formControlName="password" />
+            </label>
+        </div>
+
+        <div class="form-control" *ngIf="isInEditMode() && txtId.value">
+            <label>
+                <input type="checkbox"  />
+                <span>Alterar Senha</span>
+            </label>
+        </div>
+
+    </form>
+
+</section>

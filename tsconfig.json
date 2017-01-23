@@ -14,7 +14,8 @@
         "lib" : ["dom","es6"],
         "types": [],
         "typeRoots": ["node_modules", "node_modules/@types"],
-        "moduleResolution": "node"
+        "moduleResolution": "node",
+        "allowJs": true
     },
     "exclude": ["node_modules", "deps"],
     "compileOnSave": true,

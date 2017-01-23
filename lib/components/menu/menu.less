@@ -48,12 +48,19 @@
 
   ul li:hover > ul > li
   {
-    padding: @padding;
+    padding: 0;
     .gradient( lighten(@primaryColor, 10%), @primaryColor );
+    width: 100%;
   }
 
   ul li:hover > ul > li:hover
   {
     .inner-shadow( 0, 0, 5px, 2px, 0.3 );
+  }
+
+  ul li:hover > ul > li label
+  {
+    padding: @padding;
+    display: block;
   }
 }

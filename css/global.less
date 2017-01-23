@@ -22,3 +22,16 @@ menu ~ *
 {
   flex: 1 100%;
 }
+
+draggable > div
+{
+  height: 30px;
+  width: 100%;
+  display: block;
+  .gradient(@primaryColor, lighten(@primaryColor, 10%));
+  margin-top: 10px;
+  cursor: move;
+}
+
+@import "../lib/forms/form-component.less";
+

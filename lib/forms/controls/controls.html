@@ -1,0 +1,35 @@
+<ul>
+
+    <li [class.disabled]="changingMode">
+        <button (click)="onNewMenuClicked()"><i class="fa fa-file"></i> <span>Novo</span></button>
+    </li>
+
+    <li [class.disabled]="changingMode || !containsRegistry">
+        <button (click)="onChangeMenuClicked()"><i class="fa fa-pencil"></i> <span>Alterar</span> </button>
+    </li>
+
+    <li [class.disabled]="!changingMode">
+        <button (click)="onSaveMenuClicked()"><i class="fa fa-floppy-o"></i> <span>Salvar</span></button>
+    </li>
+
+    <li [class.disabled]="changingMode">
+        <button><i class="fa fa-search"></i> <span>Pesquisar</span></button>
+    </li>
+
+    <li [class.disabled]="!containsRegistry">
+        <button (click)="onRemoveMenuClicked()"><i class="fa fa-trash"></i> <span>Excluir</span></button>
+    </li>
+
+    <li [class.disabled]="!changingMode">
+        <button (click)="onCancelMenuClicked()"><i class="fa fa-ban"></i> <span>Cancelar</span></button>
+    </li>
+
+    <li [class.disabled]="changingMode">
+        <button (click)="onLeaveMenuClicked()"><i class="fa fa-sign-out"></i> <span>Sair</span></button>
+    </li>
+
+    <li [class.disabled]="newRegistry || !containsRegistry">
+        <button><i class="fa fa-print"></i> <span>Imprimir</span></button>
+    </li>
+
+</ul>

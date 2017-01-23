@@ -1,0 +1,63 @@
+@import (reference) '../../css/defaults.less';
+@import (reference) '../../css/dialog.less';
+
+menu + *
+{
+  margin-top: 33px;
+}
+
+menu + * > section > form
+{
+  .dialog;
+  padding: @padding * 2 0;
+}
+
+menu + * > section > form > *
+{
+  margin: 0 @padding * 2;
+}
+
+form-controls {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+
+  ul {
+    .flex-horizontal;
+    .align-hor-center;
+
+    background-color: @primaryColor;
+
+    li
+    {
+      margin: 10px 5px 10px 5px;
+
+      button {
+
+        i.fa { font-size: 14px; color: white; }
+
+        width : 150px;
+
+        .gradient( lighten(@primaryColor,30%), lighten(@primaryColor,40%) );
+        color: @primaryColor;
+        padding: 16px 0 16px 0;
+        & when ( @roundedBorders = true) {
+          border-radius: @radius;
+        }
+
+        border: 1px solid darken(@primaryColor, 10%) ;
+        .text-shadow(0 1px 3px rgba(255, 255, 255, 0.25));
+
+      }
+
+      button:hover {
+        .gradient( lighten(@primaryColor,40%), lighten(@primaryColor,30%) );
+      }
+
+      button:active {
+        .inner-shadow( 0, 0, 5px, 2px, 0.3 );
+      }
+    }
+  }
+}

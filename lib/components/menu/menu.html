@@ -1,23 +1,15 @@
 <nav id="menu-component">
 
     <ul>
+
         <li>
             <label>Sistema</label>
             <ul>
+                <li (mouseup)="changeMenu(FORM_USUARIO)"><label>Cadastro de Usuários</label></li>
                 <li (mouseup)="changeMenu(LOGOUT_OPTION)"><label>Sair</label></li>
             </ul>
         </li>
 
-        <li> <label>Formulários</label>
-
-            <ul>
-                <li (mouseup)="changeMenu(FORM_USUARIO)"><label>Cadastro de Usuários</label></li>
-            </ul>
-        </li>
-
-        <li>
-            <label>Ajuda</label>
-        </li>
         <li></li>
 
     </ul>

@@ -1,12 +1,12 @@
 
 import {
-    Component, Inject, ComponentRef, ComponentFactoryResolver, ViewChild, ElementRef,
+    Component, ComponentRef, ComponentFactoryResolver, ViewChild,
     ViewContainerRef, Type
 } from "@angular/core";
 import {AuthenticationService, AuthenticationState} from "../../services/authentication-service";
-import {MenuOptions, MenuComponent} from "../menu/menu-component";
-import {UsuarioForm} from "../../forms/usuario/index";
-import {IFormComponent} from "../../forms/form-component";
+import {MenuOptions} from "../menu/menu-component";
+import {UsuarioForm} from "../../forms/usuario/form-usuario";
+import {IFormComponent, AbstractFormComponent} from "../../forms/form-component";
 declare var __moduleName:any;
 
 @Component({
@@ -21,7 +21,7 @@ export class MainComponent
     @ViewChild('menuComponent', {read: ViewContainerRef}) menuComponent:ViewContainerRef;
 
     private menuEnabled:boolean = false;
-    private currentComponentRef:ComponentRef<IFormComponent> = null;
+    private currentComponentRef:ComponentRef<AbstractFormComponent> = null;
 
     constructor(private authenticationService:AuthenticationService, private componentFactoryResolver: ComponentFactoryResolver )
     {
@@ -67,7 +67,7 @@ export class MainComponent
         }
     }
 
-    setCurrentComponent<T> ( component:Type<T> )
+    setCurrentComponent ( component:Type<AbstractFormComponent> )
     {
         let factory = this.componentFactoryResolver.resolveComponentFactory( component );
 
@@ -76,6 +76,11 @@ export class MainComponent
             this.currentComponentRef.destroy();
         }
 
-        this.currentComponentRef =  this.menuComponent.createComponent(factory);
+        this.currentComponentRef = this.menuComponent.createComponent(factory);
+        this.currentComponentRef.instance.exitEmitter.subscribe( () => {
+
+            this.currentComponentRef.destroy();
+
+        });
     }
 }
