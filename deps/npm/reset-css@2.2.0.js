@@ -1,1 +1,0 @@
-module.exports = require("npm:reset-css@2.2.0/reset.css");

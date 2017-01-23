@@ -1,1 +1,0 @@
-module.exports = require("github:FontFaceKit/open-sans@1.4.2/open-sans.css!");

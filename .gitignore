@@ -1,3 +1,5 @@
 .idea
-*.ts
-*.less
+node_modules
+deps
+*.css
+*.js
