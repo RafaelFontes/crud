@@ -1,0 +1,40 @@
+.invisible {
+  display: none;
+}
+.font-small {
+  font-size: 11px;
+}
+.font-medium {
+  font-size: 14px;
+}
+.font-big {
+  font-size: 18px;
+}
+.flex-vertical {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+.flex-horizontal {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+}
+.aligner-start {
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+.aligner-center {
+  align-items: center;
+  justify-content: center;
+}
+.aligner-end {
+  align-items: flex-end;
+  justify-content: flex-end;
+}
+.align-hor-center {
+  justify-content: center;
+}
+.align-ver-center {
+  align-items: center;
+}
