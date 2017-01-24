@@ -51,6 +51,11 @@ export class UsuarioForm extends AbstractFormComponent
         });
     }
 
+    getSearchableFields() : string[]
+    {
+        return ["id", "username", "status"];
+    }
+
     clearForm()
     {
         this.enableForm();

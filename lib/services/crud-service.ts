@@ -101,12 +101,18 @@ export class CrudService
         });
     }
 
-    search(criteria:string) : Promise<void>
+    search(criteria?:string) : Promise<void>
     {
         return new Promise<void>( (resolve, reject) => {
 
-
-
+            if ( services[this.service] )
+            {
+                resolve( services[this.service] );
+            }
+            else
+            {
+                reject(new Error("service not found"));
+            }
         });
     }
 

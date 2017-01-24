@@ -1,0 +1,27 @@
+<section id="search-component">
+
+    <draggable></draggable>
+    <div class="content">
+        <div>
+            <input placeholder="Pesquisa Rápida" />
+        </div>
+
+        <table >
+            <thead>
+                <tr>
+                    <th *ngFor="let field of fields">{{field}}</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let row of rows">
+                    <td *ngFor="let field of fields">{{ row[field] }}</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <div>
+            <button>Pesquisa avançada</button>
+        </div>
+    </div>
+
+</section>

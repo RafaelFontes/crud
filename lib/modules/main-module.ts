@@ -12,13 +12,15 @@ import {StorageService} from "../services/storage-service";
 import {UsuarioForm} from "../forms/usuario/form-usuario";
 import {AbstractFormComponent} from "../forms/form-component";
 import {DraggableComponent} from "../components/draggable/draggable-component";
+import {SearchComponent} from "../components/search/search-component";
 
 @NgModule({
     imports :[ BrowserModule, FormsModule, ReactiveFormsModule ],
     bootstrap : [ MainComponent ],
     providers : [ StorageService, AuthenticationService],
-    declarations: [ DraggableComponent, AbstractFormComponent, UsuarioForm, MainComponent, MenuComponent, AuthenticationComponent, FormControlsComponent ],
-    entryComponents: [ UsuarioForm, FormControlsComponent ]
+    declarations: [ SearchComponent, DraggableComponent, AbstractFormComponent, UsuarioForm, MainComponent,
+        MenuComponent, AuthenticationComponent, FormControlsComponent ],
+    entryComponents: [ UsuarioForm, FormControlsComponent, SearchComponent ]
 
 })
 export class MainModule

@@ -5,7 +5,8 @@
   "main": "index.js",
   "scripts": {
     "start-server": "http-server -p 8001 -d -i --cors -o -c-1",
-    "watch": "tsc --p tsconfig.json --watch"
+    "ts-watch": "tsc.cmd --p tsconfig.json --watch",
+    "less-watch": "autoless --interval 500"
   },
   "author": "Rafael Lúcio<poste9@gmail.com>",
   "license": "ISC",
@@ -23,6 +24,7 @@
       "css": "github:systemjs/plugin-css@^0.1.32",
       "fontawsome": "github:FortAwesome/Font-Awesome@^4.7.0",
       "gsap": "npm:gsap@^1.19.1",
+      "ng2-table": "npm:ng2-table@^1.3.2",
       "reflect-metadata": "npm:reflect-metadata@^0.1.9",
       "reset-css": "npm:reset-css@^2.2.0",
       "rxjs": "npm:rxjs@^5.0.3",
@@ -42,6 +44,11 @@
     "@angular/platform-browser": "^2.4.4",
     "@angular/platform-browser-dynamic": "^2.4.4",
     "@types/gsap": "^1.19.0",
+    "autoless": "^0.1.7",
+    "http-server": "^0.9.0",
+    "less": "^2.7.2",
+    "less-watcher": "^1.2.0",
+    "ng2-table": "^1.3.2",
     "rxjs": "^5.0.3",
     "zone.js": "^0.7.6"
   }

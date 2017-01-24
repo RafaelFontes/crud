@@ -2,6 +2,7 @@ import {FormGroup, FormControl, Form} from "@angular/forms";
 import {ViewContainerRef, Component, ComponentFactoryResolver, ComponentRef, EventEmitter} from "@angular/core";
 import {FormControlsComponent} from "./controls/form-controls";
 import {CrudService} from "../services/crud-service";
+import {SearchComponent} from "../components/search/search-component";
 
 declare var __moduleName:any;
 
@@ -95,6 +96,29 @@ export class AbstractFormComponent implements IFormComponent
 
         });
 
+        this.formControls.instance.searchEmitter.subscribe( () => {
+
+            this.editMode = false;
+
+            let service = new CrudService(this.targetService);
+
+            service.search().then( ( data:any ) => {
+
+                let factory = this.componentFactoryResolver.resolveComponentFactory( SearchComponent );
+
+                let componentRef = this.container.createComponent(factory);
+
+                componentRef.instance.fields = this.getSearchableFields();
+
+                componentRef.instance.dataSource = data;
+
+                componentRef.instance.closeEmitter.subscribe( () => {
+                    componentRef.destroy();
+                });
+            });
+
+        });
+
         this.populaDados();
     }
 
@@ -111,6 +135,11 @@ export class AbstractFormComponent implements IFormComponent
     clearForm()
     {
 
+    }
+
+    getSearchableFields() : string[]
+    {
+        return ["id"];
     }
 
     enableForm()

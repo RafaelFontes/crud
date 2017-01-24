@@ -17,6 +17,7 @@ export class FormControlsComponent {
     @Output("cancel")  cancelEmitter:EventEmitter<void> = new EventEmitter<void>();
     @Output("change")  changeEmitter:EventEmitter<void> = new EventEmitter<void>();
     @Output("remove")  removeEmitter:EventEmitter<void> = new EventEmitter<void>();
+    @Output("search")  searchEmitter:EventEmitter<void> = new EventEmitter<void>();
 
     changingMode: boolean = false;
     newRegistry: boolean = false;
@@ -64,5 +65,11 @@ export class FormControlsComponent {
         this.containsRegistry = true;
         this.saveEmitter.emit();
         this.cancelEmitter.emit();
+    }
+
+    onSearchMenuClicked()
+    {
+        this.changingMode = false;
+        this.searchEmitter.emit();
     }
 }

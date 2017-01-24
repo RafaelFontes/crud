@@ -3,7 +3,8 @@
 _npm
 jspm
 typescript
-less_
+less
+http-server_
 
 **then**
 
